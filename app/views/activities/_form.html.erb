@@ -1,0 +1,10 @@
+<h1><%= @activities.id ? 'Edit Activity' : 'Create Activity' %></h1>
+<br>
+<%= form_for [@list, @activities] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <br />
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+  <%= f.submit %>
+<% end %>

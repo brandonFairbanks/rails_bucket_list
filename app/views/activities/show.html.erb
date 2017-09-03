@@ -1,0 +1,5 @@
+<h1><%= @list.name %> - <%= @activity.name %></h1>
+<p><%= @activity.body %></p>
+<%= link_to 'Edit Activity', edit_list_activity_path([@list, @activity]) %>
+<%= link_to 'Delete Activity', [@list, @activity], method: :delete %>
+<%= link_to 'Back To Activities', list_activity_path(@list) %>

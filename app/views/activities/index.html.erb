@@ -1,0 +1,7 @@
+<h1>Click an Activity To View Content</h1>
+<%= link_to 'Create a new activity', new_list_activity_path(@list) %>
+<ul>
+  <% @activities.each do |activity| %>
+    <li><%= link_to activity.name, [@list, acitivty] %></li>
+  <% end %>
+</ul>
