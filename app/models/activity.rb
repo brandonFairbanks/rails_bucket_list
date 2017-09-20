@@ -1,3 +1,3 @@
 class Activity < ApplicationRecord
-    belongs_to :lists
+    belongs_to :destination
 end

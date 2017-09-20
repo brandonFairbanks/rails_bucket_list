@@ -1,3 +1,3 @@
 class List < ApplicationRecord
-    has_one :destinations
+    has_one :destination
 end

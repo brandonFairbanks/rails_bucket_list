@@ -1,4 +1,4 @@
 class Destination < ApplicationRecord
-    belongs_to :lists
+    belongs_to :list
     has_many :activities
 end

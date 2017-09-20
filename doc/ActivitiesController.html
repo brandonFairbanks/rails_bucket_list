@@ -317,10 +317,10 @@
       <pre class="code"><span class="info file"># File 'app/controllers/activities_controller.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
-  <span class='ivar'>@activity</span> <span class='op'>=</span> <span class='ivar'>@list</span><span class='period'>.</span><span class='id identifier rubyid_activities'>activities</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_activity_params'>activity_params</span><span class='rparen'>)</span>
+  <span class='ivar'>@activity</span> <span class='op'>=</span> <span class='ivar'>@destination</span><span class='period'>.</span><span class='id identifier rubyid_activities'>activities</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_activity_params'>activity_params</span><span class='rparen'>)</span>
 
   <span class='kw'>if</span> <span class='ivar'>@activity</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
-    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='ivar'>@list</span><span class='comma'>,</span> <span class='ivar'>@activity</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='ivar'>@destination</span><span class='comma'>,</span> <span class='ivar'>@activity</span><span class='rbracket'>]</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:new</span>
   <span class='kw'>end</span>
@@ -415,7 +415,7 @@
       <pre class="code"><span class="info file"># File 'app/controllers/activities_controller.rb', line 5</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
-  <span class='ivar'>@activities</span> <span class='op'>=</span> <span class='ivar'>@list</span><span class='period'>.</span><span class='id identifier rubyid_activities'>activities</span>
+  <span class='ivar'>@activities</span> <span class='op'>=</span> <span class='ivar'>@destination</span><span class='period'>.</span><span class='id identifier rubyid_activities'>activities</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -446,7 +446,7 @@
       <pre class="code"><span class="info file"># File 'app/controllers/activities_controller.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
-  <span class='ivar'>@activity</span> <span class='op'>=</span> <span class='ivar'>@list</span><span class='period'>.</span><span class='id identifier rubyid_activities'>activities</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@activity</span> <span class='op'>=</span> <span class='ivar'>@destination</span><span class='period'>.</span><span class='id identifier rubyid_activities'>activities</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   <span class='id identifier rubyid_render'>render</span> <span class='label'>partial:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>form</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
@@ -510,7 +510,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='kw'>if</span> <span class='ivar'>@activity</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_activity_params'>activity_params</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='ivar'>@list</span><span class='comma'>,</span> <span class='ivar'>@activity</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='lbracket'>[</span><span class='ivar'>@destination</span><span class='comma'>,</span> <span class='ivar'>@activity</span><span class='rbracket'>]</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:edit</span>
   <span class='kw'>end</span>
@@ -525,7 +525,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep  3 17:28:28 2017 by
+  Generated on Wed Sep 20 17:43:54 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.3.1).
 </div>

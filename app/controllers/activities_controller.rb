@@ -1,16 +1,16 @@
 class ActivitiesController < ApplicationController
-  before_action :set_list
+  before_action :set_destination
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   def index
-    @activities = @list.activities
+    @activities = @destination.activities
   end
 
   def show
   end
 
   def new
-    @activity = @list.activities.new
+    @activity = @destination.activities.new
     render partial: "form"
   end
 
@@ -19,10 +19,10 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    @activity = @list.activities.new(activity_params)
+    @activity = @destination.activities.new(activity_params)
 
     if @activity.save
-      redirect_to [@list, @activity]
+      redirect_to [@destination, @activity]
     else
       render :new
     end
@@ -30,7 +30,7 @@ class ActivitiesController < ApplicationController
 
   def update
     if @activity.update(activity_params)
-      redirect_to [@list, @activity]
+      redirect_to [@destination, @activity]
     else
       render :edit
     end
@@ -42,8 +42,8 @@ class ActivitiesController < ApplicationController
   end
 
   private
-    def set_list
-      @list = List.find(params[:list_id])
+    def set_destination
+      @destination = Destination.find(params[:list_id])
     end
 
     def set_activity

@@ -303,18 +303,18 @@
       <pre class="lines">
 
 
-19
-20
 21
 22
 23
 24
 25
 26
-27</pre>
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
   <span class='ivar'>@list</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="List.html" title="List (class)">List</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_list_params'>list_params</span><span class='rparen'>)</span>
@@ -345,13 +345,13 @@
       <pre class="lines">
 
 
-37
-38
 39
-40</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span>
   <span class='ivar'>@list</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
@@ -377,12 +377,12 @@
       <pre class="lines">
 
 
-15
-16
-17</pre>
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 17</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span>
   <span class='id identifier rubyid_render'>render</span> <span class='label'>partial:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>form</span><span class='tstring_end'>&quot;</span></span>
@@ -407,12 +407,12 @@
       <pre class="lines">
 
 
-3
 4
-5</pre>
+5
+6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 3</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
   <span class='ivar'>@lists</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="List.html" title="List (class)">List</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
@@ -437,13 +437,13 @@
       <pre class="lines">
 
 
-10
-11
 12
-13</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
   <span class='ivar'>@list</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="List.html" title="List (class)">List</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -469,13 +469,15 @@
       <pre class="lines">
 
 
-7
-8</pre>
+8
+9
+10</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
+  
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -497,16 +499,16 @@
       <pre class="lines">
 
 
-29
-30
 31
 32
 33
 34
-35</pre>
+35
+36
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/lists_controller.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='kw'>if</span> <span class='ivar'>@list</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_list_params'>list_params</span><span class='rparen'>)</span>
@@ -525,7 +527,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sun Sep  3 17:28:28 2017 by
+  Generated on Wed Sep 20 17:43:54 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.3.1).
 </div>
